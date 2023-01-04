@@ -43,7 +43,14 @@
   padding: 0.05rem 0;
   text-align: center;
   margin: 0 1rem;
+}
+
+.link {
   text-decoration: none;
+  color: rgb(52, 129, 154);
   font-size: 1.3rem;
-  color: rgb(0, 124, 250);
+}
+
+.link.active {
+  text-decoration: underline;
 }
