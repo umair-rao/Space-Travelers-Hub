@@ -1,0 +1,14 @@
+.dragon-container {
+  padding: 0.5rem;
+  border: solid 1px #000;
+}
+
+.dragon-container:first-of-type {
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+.dragon-container:last-of-type {
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
