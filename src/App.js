@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 // pages
 import Rockets from './pages/Rockets';
 import Missions from './pages/Missions';
