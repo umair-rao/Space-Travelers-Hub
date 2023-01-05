@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { fetchRockets } from './Redux/Rockets/Rockets';
 
 // pages
 import Rockets from './Pages/Rockets';
@@ -8,7 +9,7 @@ import Missions from './Pages/Missions';
 import Dragons from './Pages/Dragons';
 import Profile from './Pages/Profile';
 import Navbar from './Components/Navbar';
-import { fetchRockets } from './Redux/Rockets/Rockets';
+
 import './App.css';
 
 function App() {
