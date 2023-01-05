@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // Utils
-import pick, { addJoin } from '../utils';
+import pick, { addJoinLeave } from '../utils';
 
 // API
 
@@ -44,7 +44,7 @@ export const fetchMissions = createAsyncThunk(FETCH_MISSIONS, async () => {
   data.forEach((object) => {
     missions.push(pick(object, selectedData));
   });
-  missions = addJoin(missions);
+  missions = addJoinLeave(missions);
   return missions;
 });
 
