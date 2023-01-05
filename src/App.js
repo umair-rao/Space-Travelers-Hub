@@ -1,21 +1,21 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 
-// pages
+import './App.css';
 import Rockets from './Pages/Rockets';
 import Missions from './Pages/Missions';
 import Dragons from './Pages/Dragons';
 import Profile from './Pages/Profile';
+
 import Navbar from './Components/Navbar';
+import { useDispatch } from 'react-redux';
 import { fetchRockets } from './Redux/Rockets/Rockets';
-import './App.css';
 
 function App() {
   const dispatch = useDispatch();
   dispatch(fetchRockets()).unwrap();
   return (
-    <>
+    <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Rockets />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/dragons" element={<Dragons />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
