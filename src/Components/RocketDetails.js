@@ -6,8 +6,10 @@ import PropTypes from 'prop-types';
 import './RocketDetails.css';
 // import rimg from '../assets/web3-hackathon-project-screenshot.png';
 
-const RocketDetails = ({ rocket }) => {
-  const { rocket_name, flickr_images, description } = rocket;
+const RocketDetails = ({ rocket, eventHandler }) => {
+  const {
+    id, rocket_name, flickr_images, description, reserved,
+  } = rocket;
 
   return (
     <>
@@ -18,11 +20,19 @@ const RocketDetails = ({ rocket }) => {
         <div className="rocket-detail-section">
           <h2 className="rocket-name">{rocket_name}</h2>
           <div>
-            <span className="reservation-status">Reserved</span>
+            {reserved && (
+              <span className="reservation-status">Reserved</span>
+            )}
             <span className="rocket-description">{description}</span>
           </div>
           <div className="rocket-btn-div">
-            <button type="button" className="rocket-btn">Reserve Rocket</button>
+            <button
+              type="button"
+              className={reserved ? 'rocket-btn-cancel' : 'rocket-btn-reserve'}
+              onClick={() => { eventHandler(id); }}
+            >
+              {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+            </button>
           </div>
         </div>
       </div>
@@ -32,6 +42,7 @@ const RocketDetails = ({ rocket }) => {
 
 RocketDetails.propTypes = {
   rocket: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  eventHandler: PropTypes.func.isRequired,
 };
 
 export default RocketDetails;
