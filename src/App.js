@@ -10,7 +10,7 @@ import Profile from './pages/Profile';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Rockets />} />
@@ -18,7 +18,7 @@ function App() {
         <Route path="/dragons" element={<Dragons />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
