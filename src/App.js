@@ -8,10 +8,12 @@ import Dragons from './Pages/Dragons';
 import Profile from './Pages/Profile';
 import Navbar from './Components/Navbar';
 import { fetchRockets } from './Redux/Rockets/Rockets';
+import { fetchMissions } from './Redux/Missions/Missions';
 
 function App() {
   const dispatch = useDispatch();
   dispatch(fetchRockets()).unwrap();
+  dispatch(fetchMissions()).unwrap();
   return (
     <div className="App">
       <Navbar />
