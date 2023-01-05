@@ -1,13 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// pages
+import Navbar from './Components/Navbar';
+
+import './App.css';
 import Rockets from './pages/Rockets';
 import Missions from './pages/Missions';
 import Dragons from './pages/Dragons';
 import Profile from './pages/Profile';
-import Navbar from './Components/Navbar';
-
-import './App.css';
 
 function App() {
   return (
