@@ -22,8 +22,9 @@
   margin-left: 2rem;
 }
 
-.logo h1 {
+.nav-heading {
   font-size: 2rem;
+  text-decoration: none !important;
 }
 
 .logo-image {

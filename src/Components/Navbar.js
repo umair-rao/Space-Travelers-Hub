@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="navbar">
       <Link to="/" className="logo">
         <img className="logo-image" src={logo} alt="Logo" />
-        <h1>Space Travelers` Hub</h1>
+        <h1 className="nav-heading">Space Travelers` Hub</h1>
       </Link>
       <div className="nav-links">
         <ul>
