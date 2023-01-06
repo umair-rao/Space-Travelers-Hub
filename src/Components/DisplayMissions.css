@@ -44,6 +44,20 @@
   font-size: 0.9rem;
 }
 
+.inactive-btn {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-self: center;
+  color: white;
+  font-weight: bold;
+  background-color: #6d757d;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+}
+
 .join-btn {
   display: flex;
   flex-direction: row;
@@ -55,15 +69,32 @@
   border-radius: 0.2rem;
   padding: 0.5rem 0.6rem;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+.leave-btn {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-self: center;
+  color: #dd3a49;
+  background: none;
+  border: 1px solid #dd3a49;
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
-  .active-btn {
+  .active-btn,
+  .inactive-btn {
     padding: 0.2rem 0.4rem;
     font-size: 0.8rem;
   }
 
-  .join-btn {
+  .join-btn,
+  .leave-btn {
     padding: 0.4rem 0.5rem;
     font-size: 0.9rem;
   }
@@ -94,12 +125,14 @@
     background-color: white;
   }
 
-  .active-btn {
+  .active-btn,
+  .inactive-btn {
     padding: 0.2rem 0.4rem;
     font-size: 0.8rem;
   }
 
-  .join-btn {
+  .join-btn,
+  .leave-btn {
     padding: 0.4rem 0.5rem;
     font-size: 0.9rem;
   }

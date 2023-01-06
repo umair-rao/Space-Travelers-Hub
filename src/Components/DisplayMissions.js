@@ -15,18 +15,35 @@ export default function DisplayMission({ mission, handleJoining }) {
         <p className="missionDescription">{description}</p>
       </div>
       <div className="grid-item">
-        <button type="button" className="active-btn">Active Member</button>
+        {mission.joined ? (
+          <button type="button" className="active-btn">Active Member</button>
+        ) : (
+          <button type="button" className="inactive-btn">NOT A MEMBER</button>
+        )}
       </div>
       <div className="grid-item">
-        <button
-          type="button"
-          className="join-btn"
-          onClick={() => {
-            handleJoining(mission_id);
-          }}
-        >
-          Join Mission
-        </button>
+        {!mission.joined ? (
+          <button
+            type="button"
+            className="join-btn"
+            onClick={() => {
+              handleJoining(mission_id);
+            }}
+          >
+            Join Mission
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="leave-btn"
+            onClick={() => {
+              handleJoining(mission_id);
+            }}
+          >
+            Leave Mission
+          </button>
+        )}
+
       </div>
     </div>
   );
