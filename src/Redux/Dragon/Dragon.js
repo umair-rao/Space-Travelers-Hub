@@ -15,7 +15,7 @@ const initialState = [];
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case `${GET_ALL_DRAGONS}/fulfilled`:
-      return action.payload;
+      return [...action.payload];
     case RESERVE_DRAGONS:
       return state;
     case CANCEL_DRAGONS:
