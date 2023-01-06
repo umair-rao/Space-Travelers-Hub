@@ -4,7 +4,9 @@ import { PropTypes } from 'prop-types';
 import './DisplayMissions.css';
 
 export default function DisplayMission({ mission, handleJoining }) {
-  const { mission_id, mission_name, description } = mission;
+  const {
+    mission_id, mission_name, description, joined,
+  } = mission;
 
   return (
     <div className="missionList">
@@ -15,14 +17,14 @@ export default function DisplayMission({ mission, handleJoining }) {
         <p className="missionDescription">{description}</p>
       </div>
       <div className="grid-item">
-        {mission.joined ? (
+        {joined ? (
           <button type="button" className="active-btn">Active Member</button>
         ) : (
           <button type="button" className="inactive-btn">NOT A MEMBER</button>
         )}
       </div>
       <div className="grid-item">
-        {!mission.joined ? (
+        {!joined ? (
           <button
             type="button"
             className="join-btn"
