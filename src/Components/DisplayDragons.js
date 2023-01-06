@@ -5,7 +5,7 @@ import './DisplayDragons.css';
 
 const DisplayDragons = ({ dragon, eventHandler }) => {
   const {
-    id, name, type, flickr_images,
+    id, name, type, flickr_images, reserved,
   } = dragon;
 
   return (
@@ -17,15 +17,18 @@ const DisplayDragons = ({ dragon, eventHandler }) => {
         <div className="dragon-detail">
           <h2 className="dragon-name">{name}</h2>
           <div>
+            {reserved && (
+              <span className="reservation-status">Reserved</span>
+            )}
             <h3 className="dragon-type">{type}</h3>
           </div>
           <div className="dragon-btn-div">
             <button
               type="button"
-              className="dragon-btn"
+              className={reserved ? 'dragon-btn-cancel' : 'dragon-btn'}
               onClick={() => { eventHandler(id); }}
             >
-              Reserve Dragon
+              {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
             </button>
           </div>
         </div>
