@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 // Components
 import MissionLists from '../Components/MissionLists';
 import RocketLists from '../Components/RocketLists';
+import DragonLists from '../Components/DragonLists';
 
 // Stylesheet
 import './Profile.css';
@@ -13,6 +14,8 @@ const Profile = () => {
   const missions = useSelector((state) => state.Missions);
   const reservedRockets = rockets.filter((item) => item.reserved === true);
   const joinedMissions = missions.filter((mission) => mission.joined === true);
+  const dragons = useSelector((state) => state.Dragons);
+  const reservedDragons = dragons.filter((dragon) => dragon.reserved === true);
 
   return (
     <>
@@ -41,6 +44,19 @@ const Profile = () => {
             ))
           ) : (
             <span className="no-reserved">No Reserved Rocket!!!</span>
+          )}
+        </div>
+        <div className="profile-dragons-section">
+          <h3 className="dragon-list">My Dragon</h3>
+          {reservedDragons.length ? (
+            reservedDragons.map((dragon) => (
+              <DragonLists
+                key={dragon.id}
+                dragon={dragon}
+              />
+            ))
+          ) : (
+            <span className="no-reserved">No Reserved Dragon!!!</span>
           )}
         </div>
       </div>
