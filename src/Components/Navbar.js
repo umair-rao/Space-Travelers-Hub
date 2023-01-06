@@ -8,7 +8,7 @@ export default function Navbar() {
   const { pathname } = location;
   return (
     <nav className="navbar">
-      <Link to="/" className="logo">
+      <Link style={{ textDecoration: 'none' }} to="/" className="logo">
         <img className="logo-image" src={logo} alt="Logo" />
         <h1 className="nav-heading">Space Travelers` Hub</h1>
       </Link>
