@@ -155,8 +155,8 @@ You can deploy this project using:
 
 👤 **Muhammad Umair Muqeem**
 
-- GitHub: @umair-rao
-- Twitter: @umair_ra0
+- GitHub: [@umair-rao](https://github.com/umair-rao)
+- Twitter: [@umair_ra0](https://twitter.com/umair_ra0)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/engr-umair-muqeem/)
 
 👤 **Alelign Ayana**
