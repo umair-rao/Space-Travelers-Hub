@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+.image-container img {
+  width: 25rem;
+  height: 15rem;
+}
+
+.dragon-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.reservation-status {
+  background-color: #6984ba;
+  color: #fff;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  margin-right: 0.4rem;
+}
+
+.dragon-btn-cancel {
+  background-color: red;
+  color: #fff;
+  height: 2.2rem;
+  width: 8.5rem;
+  border: 1px solid #000;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.dragon-btn-cancel:hover {
+  border: 1px solid red;
+}
+
+.dragon-type {
+  padding-top: 0.6rem;
+}
+
+.dragon-btn-div {
+  padding-top: 1.5rem;
+}
+
+.dragon-btn {
+  background-color: #33b249;
+  color: #fff;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0.6rem;
+}
+
+.dragon-btn:hover {
+  border: 1px solid lime;
+}

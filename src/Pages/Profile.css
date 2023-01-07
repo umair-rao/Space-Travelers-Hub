@@ -1,0 +1,27 @@
+.profile-main-container {
+  padding: 0 4%;
+  display: grid;
+  gap: 5%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mission-lists,
+.rockets-list,
+.dragon-list {
+  margin-bottom: 0.5rem;
+}
+
+.profile-rockets-section,
+.profile-missions-section,
+.profile-dragons-section {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.no-reserved {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #f68d36;
+  animation: rightToLeft 4.5s linear infinite;
+}
