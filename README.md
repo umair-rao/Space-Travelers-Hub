@@ -37,7 +37,7 @@
 # 📖 Space-Travelers-Hub
  <a name="about-project"></a>
 
-This is a React WebApp with the real live data from the SpaceX API.  The application will allow users to book rockets and join selected space missions.
+This is a React WebApp with the real live data from the SpaceX API.  The application will allow users to book Rockets, Dragons and join selected space missions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
